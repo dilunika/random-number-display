@@ -20,12 +20,13 @@
     "mocha": "--require scripts/mocha_runner src/**/__tests__/**/*.js"
   },
   "scripts": {
-    "prepublish": "babel --plugins transform-es2015-modules-umd src --ignore __tests__ --out-dir ./dist",
+    "prepublish": "babel --plugins transform-es2015-modules-umd src --ignore __tests__ --out-dir ./dist && npm run copycss",
     "lint": "eslint ./src",
     "lintfix": "eslint ./src --fix",
     "testonly": "mocha $npm_package_options_mocha",
     "test": "npm run lint && npm run testonly",
-    "test-watch": "npm run testonly -- --watch --watch-extensions js"
+    "test-watch": "npm run testonly -- --watch --watch-extensions js",
+    "copycss": "copyfiles -f './src/**/*.css' ./dist"
   },
   "devDependencies": {
     "babel-cli": "^6.6.4",
@@ -54,6 +55,7 @@
     "react-dom": "~0.14.8 || ^15.0.0"
   },
   "dependencies": {
-    "babel-runtime": "^6.6.1"
+    "babel-runtime": "^6.6.1",
+    "copyfiles": "^1.2.0"
   }
 }
