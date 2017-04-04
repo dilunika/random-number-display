@@ -4,8 +4,9 @@
 
 import React from 'react';
 import './index.css';
+import DisplayScreen from './components/display/DisplayScreen';
 
-class MyComponent extends React.Component {
+class RandomNumberDisplay extends React.Component {
 
     constructor(props) {
         super(props);
@@ -21,9 +22,7 @@ class MyComponent extends React.Component {
     render() {
         return (
             <div className="container">
-                <div className="display">
-                    {this.state.randomNumber}
-                </div>
+                <DisplayScreen text={this.state.randomNumber}/>
                 <button onClick={() => this.generateRandomNumber()} type="button">Generate Random Number</button>
             </div>
         )
@@ -36,4 +35,4 @@ class MyComponent extends React.Component {
     }
 };
 
-export default MyComponent;
+export default RandomNumberDisplay;

@@ -1,0 +1,9 @@
+.screen {
+
+    margin: 1em;
+    padding: 1em;
+    border: 1px white dashed;
+    text-align: center;
+    color: aliceblue;
+    font-size: 3em;
+}
