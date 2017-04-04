@@ -22,7 +22,7 @@ class RandomNumberDisplay extends React.Component {
     render() {
         return (
             <div className="container">
-                <DisplayScreen text={this.state.randomNumber}/>
+                <DisplayScreen text={this.state.randomNumber + ''}/>
                 <button onClick={() => this.generateRandomNumber()} type="button">Generate Random Number</button>
             </div>
         )
@@ -30,7 +30,7 @@ class RandomNumberDisplay extends React.Component {
 
     generateRandomNumber() {
 
-        const  randomNumber =Math.floor((Math.random() * 1000000) + 1);
+        const randomNumber = Math.floor((Math.random() * 1000000) + 1);
         this.setState({randomNumber});
     }
 };
