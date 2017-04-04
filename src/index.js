@@ -3,6 +3,7 @@
 // you can find tests in __test__ folder
 
 import React from 'react';
+import './index.css';
 
 class MyComponent extends React.Component {
 
