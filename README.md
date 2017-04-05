@@ -6,7 +6,27 @@ It includes linting with [ESLint](http://eslint.org/) and testing with [Mocha](h
 
 Also there is of course ES6 transpilation.
 
-## Usage
+## Usage as React Component
+Install as npm module
+`npm install --save random-number-display`
+
+```
+import RandomNumberDisplay from 'random-number-display';
+
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <p>Random Number Display Component</p>
+        <RandomNumberDisplay />
+      </div>
+    );
+  }
+}
+
+```
+
+## Usage of Project
 
 1. Clone this repo
 2. Inside cloned repo run `npm install && rm -rf .git && git init` and update `package.json` with your package name.
